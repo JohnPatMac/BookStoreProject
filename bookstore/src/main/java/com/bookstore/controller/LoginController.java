@@ -1,6 +1,6 @@
 package com.bookstore.controller;
 
-import com.bookstore.model.UserLogin;
+import com.bookstore.model.UserLogin; // Import the UserLoginb model
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,22 +13,25 @@ public class LoginController {
 
     @GetMapping("/login")
     public String showLoginForm(Model model) {
-        model.addAttribute("user", new UserLogin());
-        return "login";
+        model.addAttribute("user", new UserLogin()); 
+        return "login";  
     }
 
+    
     @PostMapping("/login")
     public String handleLogin(@Valid UserLogin user, BindingResult result, Model model) {
+     
         if (result.hasErrors()) {
-            return "login";
+            return "login"; 
         }
 
         if ("admin".equals(user.getUsername()) && "password123".equals(user.getPassword())) {
-            return "redirect:/products";
+           
+            return "redirect:/products"; 
         } else {
+            
             model.addAttribute("loginError", "Invalid username or password");
-            return "login";
+            return "login";  
         }
     }
 }
-
