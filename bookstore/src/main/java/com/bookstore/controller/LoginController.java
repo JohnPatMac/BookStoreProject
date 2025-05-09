@@ -1,6 +1,6 @@
 package com.bookstore.controller;
 
-import com.bookstore.model.UserLogin; // Import the UserLoginb model
+import com.bookstore.model.UserLogin; 
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
