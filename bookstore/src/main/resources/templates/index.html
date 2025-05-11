@@ -21,6 +21,9 @@
             padding: 20px;
             text-align: center;
         }
+        .button-group {
+            margin-top: 20px;
+        }
         a {
             display: inline-block;
             margin: 10px;
@@ -38,21 +41,32 @@
             padding: 10px;
             background-color: #333;
             color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
 <body>
 
 <header>
+	<img src="/images/Bookstore-logo.jpg" alt="Bookstore Logo" style="height:70px; margin-bottom:10px;">
     <h1>Welcome to the Bookstore!</h1>
 </header>
 
 <main>
     <h2>Your One-Stop Shop for Books</h2>
-    <p>Browse our collection of amazing books or log in to access your account.</p>
-    <a href="/login">Login</a>
-    <a href="#">Browse Books</a>
-    <a href="#">Contact Us</a>
+    <p>Browse our collection of amazing books, manage your account, or reach out to us.</p>
+    <div class="button-group">
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+        <a href="/books">Browse Books</a>
+        <a href="/categories">Categories</a>
+        <a href="/contact">Contact Us</a>
+		<a href="/cart">
+		    <img src="/images/cart.jpg" alt="Cart" style="width:24px; height:24px; vertical-align:middle;">
+		</a>
+    </div>
 </main>
 
 <footer>
