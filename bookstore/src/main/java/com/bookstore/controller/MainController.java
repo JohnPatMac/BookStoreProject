@@ -1,4 +1,4 @@
-package com.gcu.controller;
+package com.bookstore.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,12 +19,6 @@ public class MainController {
     @GetMapping("/cart")
     public String cart() {
         return "cart"; 
-    }
-
-  
-    @GetMapping("/register")
-    public String register() {
-        return "register"; 
     }
     
     @GetMapping("/categories")
