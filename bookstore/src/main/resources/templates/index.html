@@ -6,51 +6,99 @@
     <title>Welcome to the Bookstore</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            overflow: hidden;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            background-size: 400% 400%;
+            animation: gradientMove 15s ease infinite;
         }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px 0;
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
+
+        header img {
+            height: auto;        
+            max-width: 200px;    
+            width: 100%;         
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            color: #ffffff;
+        }
+
         main {
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
-        .button-group {
-            margin-top: 20px;
+
+        main h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
         }
-        a {
+
+        main p {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .button-group a {
             display: inline-block;
             margin: 10px;
-            padding: 10px 20px;
-            background-color: #007BFF;
+            padding: 12px 24px;
+            background-color: #667eea;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: background 0.3s ease, transform 0.2s ease;
         }
-        a:hover {
-            background-color: #0056b3;
+
+        .button-group a:hover {
+            background-color: #5a67d8;
+            transform: scale(1.05);
         }
+
+        .button-group img {
+            vertical-align: middle;
+            width: 24px;
+            height: 24px;
+        }
+
         footer {
             text-align: center;
             padding: 10px;
-            background-color: #333;
-            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #eee;
             position: fixed;
             width: 100%;
             bottom: 0;
+            z-index: 1;
         }
     </style>
 </head>
 <body>
 
 <header>
-	<img src="/images/Bookstore-logo.jpg" alt="Bookstore Logo" style="height:70px; margin-bottom:10px;">
+    <img src="/images/bookstore_logo.jpg" alt="Bookstore Logo">
     <h1>Welcome to the Bookstore!</h1>
 </header>
 
@@ -63,9 +111,9 @@
         <a href="/books">Browse Books</a>
         <a href="/categories">Categories</a>
         <a href="/contact">Contact Us</a>
-		<a href="/cart">
-		    <img src="/images/cart.jpg" alt="Cart" style="width:24px; height:24px; vertical-align:middle;">
-		</a>
+        <a href="/cart">
+            <img src="/images/cart.jpg" alt="Cart">
+        </a>
     </div>
 </main>
 
@@ -75,3 +123,5 @@
 
 </body>
 </html>
+
+

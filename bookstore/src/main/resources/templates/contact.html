@@ -1,5 +1,142 @@
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-	<body>
-		<h2>This is a test text for the contact page!</h2>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            animation: backgroundShift 10s ease-in-out infinite alternate;
+        }
+
+        @keyframes backgroundShift {
+            0% { background-position: left top; }
+            100% { background-position: right bottom; }
+        }
+
+        .contact-container {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .brand {
+            font-size: 26px;
+            font-weight: bold;
+            color: #5a67d8;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .tagline {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .info-box {
+            background: #f3f4f6;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            text-align: left;
+        }
+
+        .info-box strong {
+            display: block;
+            color: #444;
+            margin-bottom: 5px;
+        }
+
+        .socials a {
+            margin: 0 10px;
+            color: #667eea;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .socials a:hover {
+            color: #5a67d8;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            color: #eee;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="contact-container">
+    <div class="brand">Bookstore</div>
+    <div class="tagline">Your gateway to great reads</div>
+    <h1>Contact Me</h1>
+    <p>Hey there! Our names are John, Maiza, and Danielle, we are passionate book enthusiast and developers
+	   behind the Bookstore platform. Whether you're looking for a recommendation, reporting a bug, or just
+	   want to chat about literature, I'm all ears.</p>
+    
+    <div class="info-box">
+        <strong>Email:</strong>
+        JMD.reads@bookstore.com
+    </div>
+    
+    <div class="info-box">
+        <strong>Phone:</strong>
+        +1 (555) 123-4567
+    </div>
+    
+    <div class="info-box">
+        <strong>Location:</strong>
+        Somewhere between the pages of a great novel 📖
+    </div>
+    
+    <div class="socials">
+        <a href="#">Twitter</a> |
+        <a href="#">LinkedIn</a> |
+        <a href="#">GitHub</a>
+    </div>
+</div>
+
+<footer>
+    &copy; 2025 Bookstore. All rights reserved.
+</footer>
+
+</body>
 </html>
