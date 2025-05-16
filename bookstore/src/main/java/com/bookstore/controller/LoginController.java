@@ -2,6 +2,8 @@ package com.bookstore.controller;
 
 import com.bookstore.model.UserLogin;
 import jakarta.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -11,10 +13,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class LoginController {
+	
+	@Autowired
+	private UserLogin userLogin;
 
     @GetMapping("/login")
     public String showLoginForm(Model model) {
-        model.addAttribute("user", new UserLogin());
+        model.addAttribute("user", userLogin);
         return "login";
     }
 
