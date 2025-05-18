@@ -33,7 +33,7 @@ public class LoginController {
         }
 
         if (authService.authenticate(user)) {
-            return "redirect:/products";
+            return "redirect:/products/new";
         } else {
             model.addAttribute("loginError", "Invalid username or password");
             return "login";
