@@ -13,7 +13,7 @@ public class User {
     private String email;
     private String phoneNumber;
 
-    // getters and setters
+   
     public Long getId() {
         return id;
     }
