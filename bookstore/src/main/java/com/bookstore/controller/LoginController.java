@@ -1,7 +1,7 @@
 package com.bookstore.controller;
 
 import com.bookstore.model.UserLogin;
-import com.bookstore.service.AuthService;
+import com.bookstore.service.LoginService;
 import jakarta.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +16,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class LoginController {
 
     @Autowired
-    private AuthService authService;  // Inject service
+    private LoginService loginService;  
 
     @GetMapping("/login")
     public String showLoginForm(Model model) {
-        model.addAttribute("user", new UserLogin());  
+        model.addAttribute("user", new UserLogin());
         return "login";
     }
 
@@ -32,7 +32,7 @@ public class LoginController {
             return "login";
         }
 
-        if (authService.authenticate(user)) {
+        if (loginService.login(user)) {
             return "redirect:/products/new";
         } else {
             model.addAttribute("loginError", "Invalid username or password");
