@@ -1,8 +1,7 @@
 package com.bookstore.service;
 
-import com.gcu.model.Product;
-import com.gcu.repository.ProductRepository;
-
+import com.bookstore.model.Product;
+import com.bookstore.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
 @Service
