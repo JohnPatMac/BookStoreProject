@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookstore Login</title>
-	<link rel="stylesheet" type="text/css" href="/css/userforms.css">
+    <link rel="stylesheet" type="text/css" href="/css/userforms.css">
 </head>
 <body>
 
@@ -13,7 +13,8 @@
     <div class="tagline">Your gateway to great reads</div>
     <h1>Log In to Your Account</h1>
 
-    <form th:action="@{/login}" th:object="${user}" method="post">
+    <!-- Login Form -->
+    <form th:action="@{/login}" th:object="${user}" method="post" style="display: inline-block;">
         <div>
             <label for="username">Username</label>
             <input type="text" id="username" th:field="*{username}" required>
@@ -30,6 +31,12 @@
 
         <button type="submit">Login</button>
     </form>
+
+    <!-- Link to Delete Account Page -->
+    <form th:action="@{/deleteAccountForm}" method="get" style="display: inline-block; margin-left: 15px;">
+        <button type="submit">Delete Account</button>
+    </form>
+
 </div>
 
 <footer>

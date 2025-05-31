@@ -13,7 +13,7 @@ public class User {
     private String password;
     @Column("email")
     private String email;
-    @Column("phoneNumber")
+    @Column("phone_number")
     private String phoneNumber;
 
     public User(String username, String password, String email, String phoneNumber) {

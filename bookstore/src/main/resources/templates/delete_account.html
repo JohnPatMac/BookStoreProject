@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Account</title>
+    <link rel="stylesheet" href="/css/userforms.css">
+</head>
+<body>
+
+<div class="login-container">
+    <h1>Delete Your Account</h1>
+
+    <form th:action="@{/deleteAccount}" method="post">
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <div th:if="${deleteMessage != null}" class="error">
+            <p th:text="${deleteMessage}"></p>
+        </div>
+
+        <button type="submit" onclick="return confirm('Are you sure you want to delete your account?')">Confirm Delete</button>
+    </form>
+</div>
+
+</body>
+</html>
