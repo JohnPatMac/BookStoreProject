@@ -11,11 +11,6 @@ public class MainController {
         return "index"; 
     }
 
-    @GetMapping("/books")
-    public String books() {
-        return "books"; 
-    }
-
     @GetMapping("/cart")
     public String cart() {
         return "cart"; 
