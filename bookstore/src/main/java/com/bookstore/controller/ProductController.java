@@ -49,5 +49,14 @@ public class ProductController {
 
 	        return "productform";
 	    }
-}
+	    
 
+	    @GetMapping("/books")
+	    public String showBrowseBooksPage(Model model) {
+	        List<Product> products = productService.getAllProducts();
+	        model.addAttribute("products", products);
+	        return "books";  
+	    }
+
+
+}
