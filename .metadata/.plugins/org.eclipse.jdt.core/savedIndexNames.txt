@@ -22,6 +22,7 @@ INDEX VERSION 1.134+C:\Users\John.McIntyre\BookStore\.metadata\.plugins\org.ecli
 3413725848.index
 1574194426.index
 974226373.index
+2913353656.index
 2709406384.index
 435268583.index
 1356852809.index
@@ -42,6 +43,7 @@ INDEX VERSION 1.134+C:\Users\John.McIntyre\BookStore\.metadata\.plugins\org.ecli
 3445673164.index
 613039356.index
 3282288022.index
+9376754.index
 793742476.index
 3598450088.index
 300223210.index
@@ -60,6 +62,7 @@ INDEX VERSION 1.134+C:\Users\John.McIntyre\BookStore\.metadata\.plugins\org.ecli
 845034819.index
 1559058898.index
 2357205794.index
+2221422723.index
 919291729.index
 4195467469.index
 2159898232.index
@@ -73,6 +76,7 @@ INDEX VERSION 1.134+C:\Users\John.McIntyre\BookStore\.metadata\.plugins\org.ecli
 3251415290.index
 3158087971.index
 2722529549.index
+4031160118.index
 3286850439.index
 1865797976.index
 1508695974.index
@@ -88,5 +92,7 @@ INDEX VERSION 1.134+C:\Users\John.McIntyre\BookStore\.metadata\.plugins\org.ecli
 2735193967.index
 397164290.index
 4200520552.index
+4205319956.index
+3027447656.index
 4164087860.index
 4271524421.index
