@@ -36,7 +36,22 @@ body {
 h1 {
     font-size: 20px;
     margin-bottom: 20px;
-    color: #333;
+}
+
+h1, p {
+	color: #333;
+}
+
+.userformFooter {
+	text-align: left;
+	font-weight: bold;
+	font-size: 13px;
+	margin-top: 30px;
+}
+
+.userformFooter a {
+	color: #667eea;
+	font-weight: unset;
 }
 
 label {
