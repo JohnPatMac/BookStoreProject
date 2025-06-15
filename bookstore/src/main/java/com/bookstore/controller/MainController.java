@@ -10,11 +10,6 @@ public class MainController {
     public String home() {
         return "index"; 
     }
-
-    @GetMapping("/cart")
-    public String cart() {
-        return "cart"; 
-    }
     
     @GetMapping("/categories")
     public String categories() {
