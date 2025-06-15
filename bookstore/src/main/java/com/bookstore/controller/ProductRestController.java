@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.gcu.bookstore.Product;
-import com.gcu.bookstore.ProductService;
+import com.bookstore.model.Product;
+import com.bookstore.service.ProductService;
 
 @RestController
 @RequestMapping("/api/products")
