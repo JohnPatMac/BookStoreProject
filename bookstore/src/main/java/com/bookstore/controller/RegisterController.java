@@ -15,6 +15,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+/**
+ * Controller responsible for handling user registration,
+ * login for account update, and updating user account details.
+ */
 @Controller
 public class RegisterController {
 
@@ -24,17 +28,38 @@ public class RegisterController {
     @Autowired
     private UserService userService;
 
+    /**
+     * Constructor to initialize the RegisterController with dependencies.
+     * 
+     * @param userRegister prototype model for registration form
+     * @param userService service to manage user data
+     */
     public RegisterController(UserRegister userRegister, UserService userService) {
         this.userRegister = userRegister;
         this.userService = userService;
     }
 
+    /**
+     * Displays the registration form.
+     *
+     * @param model the model to add attributes for the form
+     * @return the view name for the registration page
+     */
     @GetMapping("/register")
     public String showRegisterForm(Model model) {
         model.addAttribute("newUser", userRegister);
         return "register";
     }
 
+    /**
+     * Processes registration form submissions.
+     * Validates input and creates a new user.
+     *
+     * @param user the user registration data submitted
+     * @param result the binding result for validation errors
+     * @param model the model to hold view attributes
+     * @return redirect to login page on success, or registration form on failure
+     */
     @PostMapping("/register")
     public String handleRegister(@Valid @ModelAttribute("newUser") UserRegister user,
                                  BindingResult result,
@@ -60,12 +85,27 @@ public class RegisterController {
         return "redirect:/login"; 
     }
 
+    /**
+     * Displays the login form for accessing account update.
+     *
+     * @param model the model to add attributes for the form
+     * @return the view name for login before update
+     */
     @GetMapping("/updateAccess")
     public String loginToUpdate(Model model) {
         model.addAttribute("updateUserLogin", new UserLogin());
         return "update_access";
     }
 
+    /**
+     * Processes login form submission for updating user info.
+     * Validates credentials and loads user for update.
+     *
+     * @param updateUserLogin the user login data submitted
+     * @param result the binding result for validation errors
+     * @param model the model to hold view attributes
+     * @return the update form view if successful, or login form on failure
+     */
     @PostMapping("/updateAccess")
     public String showUpdateForm(@Valid @ModelAttribute("updateUserLogin") UserLogin updateUserLogin,
                                  BindingResult result,
@@ -84,6 +124,15 @@ public class RegisterController {
         return "update_account";
     }
 
+    /**
+     * Processes the user account update form.
+     * Validates and saves updated user information.
+     *
+     * @param user the updated user data submitted
+     * @param result the binding result for validation errors
+     * @param model the model to hold view attributes
+     * @return redirect to home on success, or update form on failure
+     */
     @PostMapping("/updateAccount")
     public String updateUser(@Valid @ModelAttribute("updateUserLogin") User user,
                              BindingResult result,
